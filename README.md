@@ -13,12 +13,9 @@ graph TD;
 
 ```mermaid
 graph TB
-        a((Start)) --> SAB_2023_Q4.Rproj
-        SAB_2023_Q4.Rproj --> b{00_setup.R}
-        SAB_2023_Q4.Rproj --> id[/Folder_structure_code.R/]
+        a((Start)) --> SAB_2023_Q4.Rproj --> id[/Folder_structure_code.R/]
         subgraph this is a subgraph
-        b{00_setup.R} -- yes --> variables:adm
+        SAB_2023_Q4.Rproj --> b{00_setup.R}  -- yes --> variables:adm --> 01_create_dataset_for_prepopulation.R
         b{00_setup.R} -- no --> something
-        variables:adm --> 01_create_dataset_for_prepopulation.R
         end
 ```
